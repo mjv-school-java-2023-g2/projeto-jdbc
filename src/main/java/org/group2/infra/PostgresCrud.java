@@ -1,7 +1,8 @@
 package org.group2.infra;
 
-import org.example.core.model.Professor;
-import org.example.core.repository.ProfessorRepository;
+
+import org.group2.core.model.Professor;
+import org.group2.core.repository.ProfessorRepository;
 
 import java.sql.*;
 import java.util.List;

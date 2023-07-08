@@ -1,6 +1,7 @@
 package org.group2.core.repository;
 
-import org.example.core.model.Professor;
+
+import org.group2.core.model.Professor;
 
 import java.util.List;
 

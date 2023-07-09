@@ -19,12 +19,12 @@ public class PostgresCrud implements ProfessorRepository {
             String sql =
                     """ 
                     INSERT INTO tab_professor 
-                        (nome, data_nascimento, 
-                        carga_horaria, 
-                        valor_hora, estrangeiro, 
-                        horas_disponiveis, 
+                        (nome, dataNascimento, 
+                        cargaHoraria, 
+                        valorHora, estrangeiro, 
+                        horasDisponiveis, 
                         biografia, 
-                        dh_cadastro) 
+                        dataHoraCadastro) 
                     VALUES 
                         (?,?,?,?,?,?,?,?)
                     """;
@@ -53,7 +53,7 @@ public class PostgresCrud implements ProfessorRepository {
 
     @Override
     public void update(Professor professor, Long id) {
-        return null;
+        
     }
 
     @Override

@@ -12,7 +12,12 @@ Criar um CRUD que possibilite registrar um professor no Banco de Dados, deletar 
 - Postgresql
 ## :gear: Configurações do Ambiente
 - crie um Banco de Dados Postgreesql
-- preencher arquivo .env com os dados do seu Banco de Dados
+- criar arquivo de nome `.env` na raíz do projeto, com os dados do seu Banco de Dados, conforme modelo a seguir
+
+<div align="center">
+  <img src="Docs/env_image.PNG">
+</div>
+
 ## :man_technologist: Integrantes
 - Aécio Guterres
 - Arthur Barbosa

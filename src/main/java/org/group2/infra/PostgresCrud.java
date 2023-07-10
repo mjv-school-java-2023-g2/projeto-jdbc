@@ -1,11 +1,11 @@
 package org.group2.infra;
 
-
 import org.group2.core.model.Professor;
 import org.group2.core.repository.ProfessorRepository;
 
 import java.sql.*;
 import java.util.List;
+import java.util.ArrayList;
 
 public class PostgresCrud implements ProfessorRepository {
     private Connection connection;
@@ -95,6 +95,27 @@ public class PostgresCrud implements ProfessorRepository {
 
     @Override
     public List<Professor> getAll() {
-        return null;
+        List<Professor> professores = new ArrayList();
+        try {
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM tab_professor");
+            ResultSet result = statement.executeQuery();
+
+            while (result.next()){
+                professores.add(new Professor(
+                    result.getInt("id"),
+                    result.getString("nome"),
+                    (result.getDate("dataNascimento")).toLocalDate(),
+                    (result.getTime("cargaHoraria")).toLocalTime(),
+                    result.getBigDecimal("valorHora"),
+                    result.getBoolean("estrangeiro"),
+                    result.getInt("horasDisponiveis"),
+                    result.getString("biografia"),
+                    (result.getTimestamp("dataHoraCadastro")).toLocalDateTime()
+                ));
+            }
+        } catch (Exception ex){
+            ex.printStackTrace();
+        }
+        return professores;
     }
 }

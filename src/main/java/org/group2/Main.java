@@ -40,11 +40,11 @@ public class Main {
 
         professor.setNome("Maria Maria");
 
-        professorRepository.update(professor, 1L);
+        professorRepository.update(professor);
 
         System.out.println(professorRepository.getById(1));
 
-        professorRepository.delete(1L);
+        professorRepository.delete(1);
 
         System.out.println(professorRepository.getById(1));
     }

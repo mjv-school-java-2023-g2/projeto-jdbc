@@ -33,6 +33,19 @@ public class Main {
         );
 
         professorRepository.save(professor);
-        professorRepository.getById(1);
+
+        System.out.println(professorRepository.getById(1L));
+
+        professorRepository.getAll().forEach(System.out::println);
+
+        professor.setNome("Maria Maria");
+
+        professorRepository.update(professor, 1L);
+
+        System.out.println(professorRepository.getById(1L));
+
+        professorRepository.delete(1L);
+
+        System.out.println(professorRepository.getById(1L));
     }
 }

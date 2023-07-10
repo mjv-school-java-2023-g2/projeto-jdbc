@@ -2,6 +2,8 @@ package org.group2.infra;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
@@ -35,10 +37,13 @@ public class ConnectionFactory {
                 System.out.println("CONEXAO REALIZADA COM SUCESSO");
             }
         } catch (Exception ex) {
+        } catch (Exception ex) {
             ex.printStackTrace();
             throw new RuntimeException("Erro ao tentar realizar uma conexão");
         }
     }
+
+    public static Connection getConnection() {
 
     public static Connection getConnection() {
 

@@ -79,5 +79,39 @@ public class Professor {
         return dataHoraCadastro;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    public void setCargaHoraria(LocalTime cargaHoraria) {
+        this.cargaHoraria = cargaHoraria;
+    }
+
+    public void setValorHora(BigDecimal valorHora) {
+        this.valorHora = valorHora;
+    }
+
+    public void setEstrangeiro(boolean estrangeiro) {
+        this.estrangeiro = estrangeiro;
+    }
+
+    public void setHorasDisponiveis(Integer horasDisponiveis) {
+        this.horasDisponiveis = horasDisponiveis;
+    }
+
+    public void setBiografia(String biografia) {
+        this.biografia = biografia;
+    }
+
+    public void setDataHoraCadastro(LocalDateTime dataHoraCadastro) {
+        this.dataHoraCadastro = dataHoraCadastro;
+    }
 }

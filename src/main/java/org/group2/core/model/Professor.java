@@ -79,7 +79,7 @@ public class Professor {
         return dataHoraCadastro;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

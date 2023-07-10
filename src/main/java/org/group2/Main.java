@@ -21,7 +21,7 @@ public class Main {
         ProfessorRepository professorRepository = new PostgresCrud();
 
         Professor professor = new Professor(
-                1L,
+                1,
                 "Maria",
                 LocalDate.of(1990, 1,1),
                 LocalTime.of(8, 40),
@@ -34,7 +34,7 @@ public class Main {
 
         professorRepository.save(professor);
 
-        System.out.println(professorRepository.getById(1L));
+        System.out.println(professorRepository.getById(1));
 
         professorRepository.getAll().forEach(System.out::println);
 
@@ -42,10 +42,10 @@ public class Main {
 
         professorRepository.update(professor, 1L);
 
-        System.out.println(professorRepository.getById(1L));
+        System.out.println(professorRepository.getById(1));
 
         professorRepository.delete(1L);
 
-        System.out.println(professorRepository.getById(1L));
+        System.out.println(professorRepository.getById(1));
     }
 }

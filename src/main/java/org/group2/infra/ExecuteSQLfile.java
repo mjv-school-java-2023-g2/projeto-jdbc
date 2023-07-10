@@ -2,8 +2,6 @@ package org.group2.infra;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.sql.Connection;
-import java.util.Optional;
 
 public class ExecuteSQLfile {
     public static void executeSqlFile (String file_path) {

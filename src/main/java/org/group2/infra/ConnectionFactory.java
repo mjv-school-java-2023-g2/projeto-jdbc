@@ -23,7 +23,7 @@ public class ConnectionFactory {
                 };
                 try (BufferedReader br = new BufferedReader(new FileReader(".env"))) {
                     for (int i = 0; i < env.length; i++)
-                        env[i] = br.readLine().split(" = ")[1];
+                        env[i] = br.readLine().split("=")[1].trim();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

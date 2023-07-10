@@ -32,5 +32,6 @@ public class Main {
         );
 
         professorRepository.save(professor);
+        professorRepository.getById(1);
     }
 }

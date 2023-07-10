@@ -7,6 +7,7 @@ import java.time.LocalTime;
 
 public class Professor {
 
+    private Integer id;
     private String nome;
     private LocalDate dataNascimento;
     private LocalTime cargaHoraria;
@@ -15,6 +16,20 @@ public class Professor {
     private Integer horasDisponiveis;
     private String biografia;
     private LocalDateTime dataHoraCadastro;
+
+    public Professor(Integer id, String nome, LocalDate dataNascimento, LocalTime cargaHoraria, BigDecimal valorHora,
+                     boolean estrangeiro, Integer horasDisponiveis, String biografia,
+                     LocalDateTime dataHoraCadastro) {
+        this.id = id;               
+        this.nome = nome;
+        this.dataNascimento = dataNascimento;
+        this.cargaHoraria = cargaHoraria;
+        this.valorHora = valorHora;
+        this.estrangeiro = estrangeiro;
+        this.horasDisponiveis = horasDisponiveis;
+        this.biografia = biografia;
+        this.dataHoraCadastro = dataHoraCadastro;
+    }
 
     public Professor(String nome, LocalDate dataNascimento, LocalTime cargaHoraria, BigDecimal valorHora,
                      boolean estrangeiro, Integer horasDisponiveis, String biografia,
@@ -27,6 +42,10 @@ public class Professor {
         this.horasDisponiveis = horasDisponiveis;
         this.biografia = biografia;
         this.dataHoraCadastro = dataHoraCadastro;
+    }
+
+    public Integer getId(){
+        return id;
     }
 
     public String getNome() {

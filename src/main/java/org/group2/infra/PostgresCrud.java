@@ -57,9 +57,35 @@ public class PostgresCrud implements ProfessorRepository {
     }
 
     @Override
-    public Professor getById(Long id) {
-        return null;
+    public Professor getById (int id) {
+        Professor professor = null;
+        try {
+            String sql = "SELECT * FROM tab_professor WHERE id = ?";
+
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setInt(1,id);
+
+            ResultSet result = statement.executeQuery();
+
+            while (result.next()){
+                professor = new Professor(
+                    result.getInt("id"),
+                    result.getString("nome"),
+                    (result.getDate("dataNascimento")).toLocalDate(),
+                    (result.getTime("cargaHoraria")).toLocalTime(),
+                    result.getBigDecimal("valorHora"),
+                    result.getBoolean("estrangeiro"),
+                    result.getInt("horasDisponiveis"),
+                    result.getString("biografia"),
+                    (result.getTimestamp("dataHoraCadastro")).toLocalDateTime()
+                    );
+            }
+        } catch (Exception ex){
+            ex.printStackTrace();
+        }
+        return professor;
     }
+    
 
     @Override
     public List<Professor> getAll() {

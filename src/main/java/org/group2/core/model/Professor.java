@@ -17,7 +17,7 @@ public class Professor {
     private String biografia;
     private LocalDateTime dataHoraCadastro;
 
-    public Professor(Integer id, String nome, LocalDate dataNascimento, LocalTime cargaHoraria, BigDecimal valorHora,
+    public Professor(int id, String nome, LocalDate dataNascimento, LocalTime cargaHoraria, BigDecimal valorHora,
                      boolean estrangeiro, Integer horasDisponiveis, String biografia,
                      LocalDateTime dataHoraCadastro) {
         this.id = id;               
@@ -43,7 +43,6 @@ public class Professor {
         this.biografia = biografia;
         this.dataHoraCadastro = dataHoraCadastro;
     }
-
     public Integer getId(){
         return id;
     }
@@ -79,4 +78,6 @@ public class Professor {
     public LocalDateTime getDataHoraCadastro() {
         return dataHoraCadastro;
     }
+
+
 }

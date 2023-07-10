@@ -15,6 +15,7 @@ public class Main {
         ProfessorRepository professorRepository = new PostgresCrud();
 
         Professor professor = new Professor(
+                1L,
                 "Maria",
                 LocalDate.of(1990, 1,1),
                 LocalTime.of(8, 40),

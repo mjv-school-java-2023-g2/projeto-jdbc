@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface ProfessorRepository {
     void save(Professor professor);
-    void delete(Long id);
-    void update(Professor professor, Long id);
-    Professor getById(Long id);
+    void delete(int id);
+    void update(Professor professor);
+    Professor getById(int id);
     List<Professor> getAll();
 }
